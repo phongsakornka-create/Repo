@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️ แก้ที่ 1: ชื่อที่จะโชว์บนแท็บเบราว์เซอร์ -->
+  <title> พงศกร เเก้วจันทร์ — Datasheet</title>
+
+  <!-- ✏️ แก้ที่ 2: คำอธิบายสั้น ๆ ที่จะโชว์ตอนแชร์ลิงก์ -->
+  <meta name="description" content="นามบัตรดิจิทัลของนักศึกษาวิศวกรรมคอมพิวเตอร์" />
+
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- ฟอนต์จาก Google Fonts: IBM Plex Sans Thai (เนื้อหา) + IBM Plex Mono (ตัวเลข/ป้ายกำกับ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- แยก CSS ออกเป็น 2 ไฟล์: theme = สิ่งที่แก้บ่อย, style = โครงสร้างที่แก้ทีหลัง -->
+  <link rel="stylesheet" href="./css/theme.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- ปุ่มสลับโหมดสว่าง/มืด ลอยมุมขวาบน -->
+  <button class="mode-toggle" id="modeToggle" type="button" aria-label="สลับโหมดสีของหน้าเว็บ">
+    <span class="mode-toggle__dot" aria-hidden="true"></span>
+    <span class="mode-toggle__text" id="modeLabel">NEGATIVE</span>
+  </button>
+
+  <main class="sheet">
+
+    <!-- ═══ ส่วนหัว: เลียนแบบหัวกระดาษ datasheet ของชิ้นส่วนอิเล็กทรอนิกส์ ═══ -->
+    <header class="masthead reveal">
+      <div class="masthead__meta">
+        <span class="eyebrow">Datasheet</span>
+        <!-- ✏️ แก้ที่ 3: รหัสนักศึกษา ใช้เป็น "รหัสชิ้นส่วน" -->
+        <span class="partno">CE671540005008-1</span>
+      </div>
+
+      <!-- ✏️ แก้ที่ 4: ชื่อ-นามสกุลของคุณ -->
+      <h1 class="masthead__name">พงศกร เเก้วจันทร์</h1>
+
+      <!-- ✏️ แก้ที่ 5: บทบาท/สิ่งที่คุณกำลังทำอยู่ -->
+      <p class="masthead__role">นักศึกษาวิศวกรรมคอมพิวเตอร์ KSU· สนใจงาน Backend และระบบอัตโนมัติ</p>
+    </header>
+
+    <!-- ═══ ตารางสเปก: คู่ชื่อ-ค่า แบบมีเส้นประเชื่อม ═══ -->
+    <section class="block reveal" aria-labelledby="spec-title">
+      <h2 class="eyebrow" id="spec-title">Specifications</h2>
+
+      <!-- ✏️ แก้ที่ 6: เพิ่ม/ลบ/แก้แถวได้ตามใจ 1 แถว = 1 คู่ dt + dd -->
+      <dl class="spec">
+        <div class="spec__row">
+          <dt>สาขาวิชา</dt>
+          <dd>วิศวกรรมคอมพิวเตอร์</dd>
+        </div>
+        <div class="spec__row">
+          <dt>ชั้นปี</dt>
+          <dd>3</dd>
+        </div>
+        <div class="spec__row">
+          <dt>สถาบัน</dt>
+          <dd>มหาวิทยาลัยกาฬสินธุ์</dd>
+        </div>
+        <div class="spec__row">
+          <dt>ภาษาที่ใช้บ่อย</dt>
+          <dd>JavaScript · Python · SQL</dd>
+        </div>
+        <div class="spec__row">
+          <dt>สถานะปัจจุบัน</dt>
+          <dd><span class="badge">กำลังหาที่ฝึกงาน</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ═══ ผังขา: ส่วนที่เป็นเอกลักษณ์ของหน้านี้ ═══
+         ลิงก์ติดต่อทั้งหมดถูกวาดเป็น "ผังขาของไอซี" แต่ละขาคือช่องทางติดต่อหนึ่งช่อง -->
+    <section class="block reveal" aria-labelledby="pin-title">
+      <h2 class="eyebrow" id="pin-title">Pin configuration</h2>
+
+      <div class="chip">
+        <!-- ขาฝั่งซ้าย -->
+        <ul class="chip__side chip__side--left">
+          <!-- ✏️ แก้ที่ 7: เปลี่ยน href และชื่อขาให้เป็นของคุณ -->
+          <li>
+            <a class="pin" href="https://github.com/phongsakornka-create/Repo" target="_blank" rel="noopener">
+              <span class="pin__no">1</span>
+              <span class="pin__label">GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a class="pin" href="mailto:nicha@example.com" data-copy="nicha@example.com">
+              <span class="pin__no">2</span>
+              <span class="pin__label">Email</span>
+            </a>
+          </li>
+          <li>
+            <a class="pin" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+              <span class="pin__no">3</span>
+              <span class="pin__label">LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a class="pin" href="./assets/resume.pdf">
+              <span class="pin__no">4</span>
+              <span class="pin__label">Resume</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- ตัวชิป: มีรอยบากครึ่งวงกลมด้านบนเหมือนไอซีจริง -->
+        <div class="chip__body" aria-hidden="true">
+          <span class="chip__notch"></span>
+          <!-- ✏️ แก้ที่ 8: ชื่อเล่นภาษาอังกฤษ ตัวพิมพ์ใหญ่ สั้น ๆ -->
+          <span class="Phongsakorn .ka">KT</span>
+          <span class="chip__code">REV 1.0</span>
+        </div>
+
+        <!-- ขาฝั่งขวา -->
+        <ul class="chip__side chip__side--right">
+          <li>
+            <a class="pin" href="https://www.facebook.com/" target="_blank" rel="noopener">
+              <span class="pin__no">8</span>
+              <span class="pin__label">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a class="pin" href="https://www.instagram.com/" target="_blank" rel="noopener">
+              <span class="pin__no">7</span>
+              <span class="pin__label">Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a class="pin" href="https://line.me/" target="_blank" rel="noopener">
+              <span class="pin__no">6</span>
+              <span class="pin__label">LINE</span>
+            </a>
+          </li>
+          <li>
+            <a class="pin" href="https://medium.com/" target="_blank" rel="noopener">
+              <span class="pin__no">5</span>
+              <span class="pin__label">Blog</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ข้อความแจ้งผลตอนกดคัดลอกอีเมล จะถูกเติมด้วย JS -->
+      <p class="chip__hint" id="copyHint" role="status">กดขา Email เพื่อคัดลอกที่อยู่อีเมล</p>
+    </section>
+
+    <!-- ═══ คำอธิบายการใช้งาน: เขียนแนะนำตัวแบบสั้น ═══ -->
+    <section class="block reveal" aria-labelledby="about-title">
+      <h2 class="eyebrow" id="about-title">Description</h2>
+
+      <!-- ✏️ แก้ที่ 9: แนะนำตัว 2-3 ประโยค บอกว่าทำอะไรได้และกำลังสนใจอะไร -->
+      <p class="prose">
+        ชอบเล่นเกมเเละกีฬา
+      </p>
+
+      <!-- ✏️ แก้ที่ 10: ทักษะหรือเครื่องมือที่ใช้เป็น -->
+      <ul class="tags">
+        <li>Node.js</li>
+        <li>PostgreSQL</li>
+        <li>Git</li>
+        <li>Docker</li>
+        <li>Figma</li>
+      </ul>
+    </section>
+
+    <!-- ═══ กรอบท้ายกระดาษ: เลียนแบบ title block ของแบบวิศวกรรม ═══ -->
+    <footer class="titleblock reveal">
+      <div class="titleblock__cell">
+        <span class="titleblock__key">Drawn by</span>
+        <!-- ✏️ แก้ที่ 11: ชื่อคุณอีกครั้ง -->
+        <span class="titleblock__val">พงศกร เเก้วจันทร์</span>
+      </div>
+      <div class="titleblock__cell">
+        <span class="titleblock__key">Updated</span>
+        <span class="titleblock__val" id="year">—</span>
+      </div>
+      <div class="titleblock__cell">
+        <span class="titleblock__key">Sheet</span>
+        <span class="titleblock__val">1 of 1</span>
+      </div>
+      <div class="titleblock__cell">
+        <span class="titleblock__key">Rev</span>
+        <span class="titleblock__val">1.0</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- โหลด JS ท้ายสุด เพื่อให้ HTML แสดงผลก่อน -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
